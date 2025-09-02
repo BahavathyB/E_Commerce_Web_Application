@@ -5,7 +5,7 @@ export const fetchAllProducts = () => async (dispatch) => {
   dispatch(fetchAllProductsStart());
 
   try{
-    let response = await axios.get("http://localhost:3000/allproducts");
+    let response = await axios.get("https://e-commerce-backend-xnl1.onrender.com/allproducts");
     console.log("response.data", response.data)
     dispatch(fetchAllProductsSuccess(response.data.allProducts));
   }
