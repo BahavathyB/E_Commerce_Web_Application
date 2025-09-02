@@ -59,7 +59,7 @@ const LoginSignUp = () => {
 
         if (role === "admin") {
           // Redirect admin to admin site and pass returnUrl
-          const returnUrl = encodeURIComponent("https://e-commerce-users.onrender.com/login");
+          const returnUrl = encodeURIComponent("https://e-commerce-users.onrender.com");
           window.location.replace(`https://e-commerce-admin-zvc5.onrender.com/?returnUrl=${returnUrl}`);
         } else if (role === "user") {
           // Redirect user to user home
