@@ -8,7 +8,7 @@ export const fetchCartItems = () => async (dispatch) => {
     const token = localStorage.getItem("auth_token");
     console.log("token:" , token);
     
-    const response = await axios.get("http://localhost:3000/cart/get", {
+    const response = await axios.get("https://e-commerce-backend-xnl1.onrender.com/cart/get", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
