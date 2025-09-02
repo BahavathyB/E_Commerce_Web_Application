@@ -59,11 +59,11 @@ const LoginSignUp = () => {
 
         if (role === "admin") {
           // Redirect admin to admin site and pass returnUrl
-          const returnUrl = encodeURIComponent("http://localhost:5173/login");
+          const returnUrl = encodeURIComponent("https://e-commerce-users.onrender.com/login");
           window.location.replace(`https://e-commerce-admin-zvc5.onrender.com/?returnUrl=${returnUrl}`);
         } else if (role === "user") {
           // Redirect user to user home
-          window.location.replace("http://localhost:5173/");
+          window.location.replace("https://e-commerce-users.onrender.com");
         } else {
           alert("Unknown role. Please contact support.");
         }
