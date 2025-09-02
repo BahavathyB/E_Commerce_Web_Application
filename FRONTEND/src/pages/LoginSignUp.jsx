@@ -38,8 +38,8 @@ const LoginSignUp = () => {
 
     const endpoint =
       state === "Login"
-        ? "http://localhost:3000/login"
-        : "http://localhost:3000/signup";
+        ? "https://e-commerce-backend-xnl1.onrender.com/login"
+        : "https://e-commerce-backend-xnl1.onrender.com/signup";
 
     try {
       const res = await axios.post(endpoint, formData);
@@ -60,7 +60,7 @@ const LoginSignUp = () => {
         if (role === "admin") {
           // Redirect admin to admin site and pass returnUrl
           const returnUrl = encodeURIComponent("http://localhost:5173/login");
-          window.location.replace(`http://localhost:5174/?returnUrl=${returnUrl}`);
+          window.location.replace(`https://e-commerce-admin-zvc5.onrender.com/?returnUrl=${returnUrl}`);
         } else if (role === "user") {
           // Redirect user to user home
           window.location.replace("http://localhost:5173/");
