@@ -50,7 +50,7 @@ const AddProduct = () => {
       formData.append("image", image);
 
       const imageRes = await axios.post(
-        "http://localhost:3000/upload-image",
+        "https://e-commerce-backend-xnl1.onrender.com/upload-image",
         formData,
         {
           headers: {
@@ -65,7 +65,7 @@ const AddProduct = () => {
       const productData = { ...productdetails, image: imageUrl };
 
       const productRes = await axios.post(
-        "http://localhost:3000/addproduct",
+        "https://e-commerce-backend-xnl1.onrender.com/addproduct",
         productData
       );
 
