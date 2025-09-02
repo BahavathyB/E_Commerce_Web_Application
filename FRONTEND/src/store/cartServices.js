@@ -1,7 +1,7 @@
 // src/actions/cartActions.js
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:3000"; // adjust to your backend base URL
+const API_BASE_URL = "https://e-commerce-backend-xnl1.onrender.com"; // adjust to your backend base URL
 
 const token = localStorage.getItem("auth_token");
 const config = {
