@@ -11,7 +11,7 @@ const Home = () => {
 
   const fetchAllProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/allproducts");
+      const res = await axios.get("https://e-commerce-backend-xnl1.onrender.com/allproducts");
       setAllProducts(res.data.allProducts || []);
     } catch (error) {
       console.error("Failed to fetch products:", error);
