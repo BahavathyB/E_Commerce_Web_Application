@@ -81,10 +81,6 @@ const LoginSignUp = () => {
   };
 
   useEffect(() => {
-    localStorage.removeItem("auth_token");
-  }, []);
-
-  useEffect(() => {
     console.log(window.location.href);
     setFieldMenu(
       state === "Login"
