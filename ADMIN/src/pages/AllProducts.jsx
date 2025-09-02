@@ -24,7 +24,7 @@ const AllProducts = () => {
 
   const fetchAllProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/allproducts");
+      const res = await axios.get("https://e-commerce-backend-xnl1.onrender.com/allproducts");
       setAllProducts(res.data.allProducts);
     } catch (error) {
       console.error("Failed to fetch products:", error);
@@ -40,7 +40,7 @@ const AllProducts = () => {
   let handleDeleteProduct = async (id) => {
     console.log("productID: ", id);
     try {
-      let res = await axios.delete(`http://localhost:3000/deleteproduct/:id`);
+      let res = await axios.delete(`https://e-commerce-backend-xnl1.onrender.com/deleteproduct/${id}`);
 
       console.log("Product deleted successfully:", res.data.message);
 
