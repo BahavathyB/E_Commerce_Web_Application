@@ -30,8 +30,8 @@ const UpdateProduct = ({ productId, onClose, onSuccess }) => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/products/get/${productId}`);
-        const product = res.data.product;
+        const res = await axios.get(`https://e-commerce-backend-xnl1.onrender.com/product/${productId}`);
+        const product = res.data.product[0];
         console.log(res.data);
         
         setProductDetails({
@@ -72,7 +72,7 @@ const UpdateProduct = ({ productId, onClose, onSuccess }) => {
       if (image) {
         const formData = new FormData();
         formData.append("image", image);
-        const imageRes = await axios.post("http://localhost:3000/upload-image", formData, {
+        const imageRes = await axios.post("https://e-commerce-backend-xnl1.onrender.com/upload-image", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
         updatedProduct.image = imageRes.data.url;
@@ -81,7 +81,7 @@ const UpdateProduct = ({ productId, onClose, onSuccess }) => {
       console.log("Update image: ", updatedProduct.image);
       
 
-      const response = await axios.put(`http://localhost:3000/product/:id`, updatedProduct);
+      const response = await axios.put(`https://e-commerce-backend-xnl1.onrender.com/updateproduct/${productId}`, updatedProduct);
       console.log("Update product: ", response.data.message)
 
       if (onSuccess) onSuccess();
